@@ -9,7 +9,6 @@ brew install "gengetopt"
 brew install "libuv"
 brew install "speexdsp"
 brew install "sox"
-brew install "cpputest"
 brew install "google-benchmark"
 
 scons -Q clean
@@ -21,7 +20,7 @@ scons -Q \
       --enable-benchmarks \
       --enable-examples \
       --sanitizers=all \
-      --build-3rdparty=openfec \
+      --build-3rdparty=openfec,cpputest \
       test
 
 scons -Q \
@@ -29,7 +28,7 @@ scons -Q \
       --enable-tests \
       --enable-benchmarks \
       --enable-examples \
-      --build-3rdparty=openfec \
+      --build-3rdparty=openfec,cpputest \
       test
 
 scons -Q \
